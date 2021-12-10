@@ -1,12 +1,12 @@
 # -----------------------------------------------------------------
 # PS ISO Tool MSYS/MINGW Makefile (uses GCC compiler)(CaptainCPS-X, 2013)
 # -----------------------------------------------------------------
-TARGET		:= 	bin/psiso_tool.exe
+TARGET		:= 	bin/psiso_tool
 
 CC 			:= 	g++
 CXXFLAGS 	:= 	-O1 -Wl,-subsystem,console -Wall -W
 LDFLAGS 	:= 	-static-libgcc -static-libstdc++
-LIBS		:=	-lkernel32 -lshell32 -luser32
+#LIBS		:=	-lkernel32 -lshell32 -luser32
 INCLUDES	:= 	-Isource
 
 SRCS		:= 	source/psiso_tool.cpp \

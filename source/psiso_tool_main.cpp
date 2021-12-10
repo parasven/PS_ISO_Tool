@@ -168,12 +168,12 @@ int main(int argc, const char* argv[])
 
 	printf(
 		SEP_LINE_1
-		"PS ISO Tool v"APP_VER" (supports PS1/PS2/PS3/PSP) (CaptainCPS-X, 2013) \n"
+		"PS ISO Tool v" APP_VER " (supports PS1/PS2/PS3/PSP) (CaptainCPS-X, 2013) \n"
 		SEP_LINE_1
 	);
 
 #ifdef WIN
-	SetWindowText(hAppWnd, "PS ISO Tool v"APP_VER" (supports PS1/PS2/PS3/PSP) (CaptainCPS-X, 2013)");
+	SetWindowText(hAppWnd, "PS ISO Tool v" APP_VER " (supports PS1/PS2/PS3/PSP) (CaptainCPS-X, 2013)");
 #endif
 
 	bool bPatch = false;
@@ -438,7 +438,7 @@ int main(int argc, const char* argv[])
 			printf("Preparing to patch the created PS3 ISO... \n");
 			printf(SEP_LINE_2);
 
-			SetWindowText(hAppWnd, "PS ISO Tool v"APP_VER" (supports PS1/PS2/PS3/PSP) (CaptainCPS-X, 2013) \n");
+			SetWindowText(hAppWnd, "PS ISO Tool v" APP_VER " (supports PS1/PS2/PS3/PSP) (CaptainCPS-X, 2013) \n");
 
 			memset(_argv[1], 0, 512);
 			memset(_argv[2], 0, 512);
