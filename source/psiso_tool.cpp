@@ -217,17 +217,17 @@ int GetTitle(char *_szTitleID, char* szDatabase, char* szTitle, int nSystem)
 	char szFullDatabasePath[2048];
 	ZERO(szFullDatabasePath);
 
-#ifndef PSISOTOOL_PS3BUILD
+#if not defined PSISOTOOL_PS3BUILD && not defined LINUXLOCAL
 	if (!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath))) {
 		// error...
 		return 0;
 	}
 	cCurrentPath[sizeof(cCurrentPath) - 1] = '\0';
-
 	sprintf(szFullDatabasePath, "%s/%s", cCurrentPath, szDatabase); 
 #else
 	strcpy(szFullDatabasePath, szDatabase);
 #endif
+
 
 #ifdef WIN
 	FILE *fp = NULL;
@@ -293,6 +293,9 @@ int GetTitle(char *_szTitleID, char* szDatabase, char* szTitle, int nSystem)
 		SAFE_CLOSE(fd);
 #endif
 	}
+
+
+
 
 	return 0;
 }

@@ -209,6 +209,11 @@ The reason you can just use lseek is because off_t is a 64bit wide value.
 #define PS1_TITLE_DB	PS3_GAME_CWD "/db/ps1titles_us_eu_jp.txt"	// by CaptainCPS-X based on (http://sonyindex.com/)
 #define PS2_TITLE_DB	PS3_GAME_CWD "/db/ps2titleid.txt"			// by aldostools [?]
 
+#elif defined LINUXLOCAL
+
+#define PS1_TITLE_DB "/usr/local/etc/psisotool_dbs/ps1titles_us_eu_jp.txt" // by CaptainCPS-X based on (http://sonyindex.com/)
+#define PS2_TITLE_DB "/usr/local/etc/psisotool_dbs/ps2titleid.txt"		 // by aldostools [?]
+
 #else
 
 #define PS1_TITLE_DB "db/ps1titles_us_eu_jp.txt" // by CaptainCPS-X based on (http://sonyindex.com/)
